@@ -15,6 +15,7 @@ import {
   SpeechRecognizer,
 } from "microsoft-cognitiveservices-speech-sdk";
 import os from "os";
+import path from "path";
 import Deferred from "./Deferred";
 import { FilePushStream } from "./FilePushStream";
 import { Subtitle } from "./Subtitle";
@@ -52,7 +53,7 @@ export class SubtitleGenerator {
     const audioConfig = AudioConfig.fromStreamInput(audioStream);
 
     this._speechRecognizer = this.getSpeechRecognizer(speechConfig, audioConfig);
-    this._outputFilename = `${wavFilename}.srt`;
+    this._outputFilename = this.getOutputFilename(wavFilename);
   }
 
   /**
@@ -168,5 +169,13 @@ export class SubtitleGenerator {
     };
 
     return speechRecognizer;
+  };
+
+  private getOutputFilename = (wavFilename: string): string => {
+    const dir = path.dirname(wavFilename);
+    const extension = path.extname(wavFilename);
+    const pathWithoutExtension = path.basename(wavFilename, extension);
+
+    return path.join(dir, `${pathWithoutExtension}.json`);
   };
 }

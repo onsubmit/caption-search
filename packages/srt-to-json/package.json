@@ -1,0 +1,15 @@
+{
+  "name": "srt-to-json",
+  "version": "1.0.0",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc"
+  },
+  "dependencies": {
+    "line-reader": "^0.4.0"
+  },
+  "devDependencies": {
+    "@types/line-reader": "^0.0.34"
+  }
+}
