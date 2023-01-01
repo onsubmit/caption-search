@@ -1,0 +1,16 @@
+{
+  "name": "srt-js",
+  "version": "1.0.0",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "dependencies": {
+    "microsoft-cognitiveservices-speech-sdk": "^1.24.1",
+    "sprintf-js": "^1.1.2"
+  },
+  "scripts": {
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "@types/sprintf-js": "^1.1.2"
+  }
+}
