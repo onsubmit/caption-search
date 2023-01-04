@@ -1,5 +1,5 @@
 # Example
 
 ```
-npm run start -- -i C:\git\caption-search\packages\audio-extract\input\ -e mp4
+npm run start -- -i C:\git\caption-search\packages\audio-extract-app\input\ -e mp4
 ```

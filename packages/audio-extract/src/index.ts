@@ -1,8 +1,5 @@
 import { spawn } from "child_process";
 import path from "path";
-import AppConfig from "./AppConfig";
-
-const appConfig = new AppConfig().validate();
 
 export const extract = (pathToVideo: string) => {
   const args = [
@@ -38,8 +35,4 @@ function getOutputFilename(pathToVideo: string): string {
   const pathWithoutExtension = path.basename(pathToVideo, extension);
 
   return path.join(dir, `${pathWithoutExtension}.wav`);
-}
-
-if (appConfig.extract) {
-  extract(appConfig.pathToVideo);
 }
