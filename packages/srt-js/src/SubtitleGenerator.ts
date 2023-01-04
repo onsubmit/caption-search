@@ -176,6 +176,6 @@ export class SubtitleGenerator {
     const extension = path.extname(wavFilename);
     const pathWithoutExtension = path.basename(wavFilename, extension);
 
-    return path.join(dir, `${pathWithoutExtension}.json`);
+    return path.join(dir, `${pathWithoutExtension}.srt`);
   };
 }
