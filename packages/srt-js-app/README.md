@@ -23,5 +23,5 @@ LANGUAGE="en-us"
 - Place your WAV file(s) in a folder, then invoke:
 
 ```
-npm run start -- -i C:\git\caption-search\packages\audio-extract\input
+npm run start -- -i C:\git\caption-search\packages\audio-extract-app\input
 ```
